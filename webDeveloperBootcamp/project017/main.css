@@ -1,0 +1,67 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background: #232323;
+    margin: 0;
+    padding: 0;
+}
+
+.headContainer {
+    height: 25%;
+    background-color: lightskyblue;
+}
+
+.nvBar1 {
+    background: whitesmoke;
+}
+
+.nav-item{
+    padding: 0 5rem;
+    padding: 1px inherit;
+}
+
+.nav-link {
+    color:black;
+    background:inherit;
+    -webkit-transition: color .5s ease-in, background-color .5s ease-in;
+    -moz-transition: color .5s ease-in, background-color .5s ease-in;
+    transition: color .5s ease-in, background-color .5s ease-in;
+}
+
+.nav-link:hover {
+    background-color: #232323;
+    color:whitesmoke;
+}
+
+#easy:hover {
+    background-color: green;
+}
+
+#hard:hover {
+    background-color: red;
+}
+
+.square {
+    width:30%;
+    background-color: #232323;
+    padding-bottom:30%;
+    float:left;
+    margin: 1.66%;
+    border-radius: 1rem;
+}
+
+.correct {
+    background-color: green !important;
+}
+
+.fade {
+    -webkit-animation: fade 2s ease-in;
+    -moz-animation: fade 2s ease-in;
+    animation: fade 2s ease-in;
+}
+
+@keryframes fade {
+    from (background-color:inherit;);
+    to (background-color:transparent;)
+}
