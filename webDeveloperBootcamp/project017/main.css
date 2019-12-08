@@ -16,6 +16,8 @@ body {
 }
 
 .nav-link {
+    font-size: 2rem;
+    padding:2rem 2rem;
     color:black;
     background:inherit;
     -webkit-transition: color .5s ease-in, background-color .5s ease-in;
