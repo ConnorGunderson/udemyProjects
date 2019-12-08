@@ -7,18 +7,12 @@ body {
     padding: 0;
 }
 
-.headContainer {
-    height: 25%;
-    background-color: lightskyblue;
-}
-
 .nvBar1 {
     background: whitesmoke;
 }
 
-.nav-item{
-    padding: 0 5rem;
-    padding: 1px inherit;
+.btn:active, .btn:visited {
+    box-shadow: none;
 }
 
 .nav-link {
@@ -32,6 +26,11 @@ body {
 .nav-link:hover {
     background-color: #232323;
     color:whitesmoke;
+}
+
+#answer:hover {
+    background: none;
+    color:black;
 }
 
 #easy:hover {

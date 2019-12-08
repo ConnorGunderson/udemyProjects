@@ -14,22 +14,24 @@
   </head>
   <body>
     <!-- NOTE Header -->
-    <div class="headContainer">
+    <div class="headContainer py-2">
       <h1 class="text-light text-center">The Great <br><span id="colorDisplay">RGB</span><br>Color Game</h1>
     </div>
     <!-- NOTE Nav -->
-    <nav class="nvBar1 ">
-      <ul class="nav justify-content-center">
-        <li class="nav-item"><a href="" class="nav-link w-100">Reset</a></li>
-        <div class="nav " id="diffNav">
-          <li class="nav-item p-0"><button class="btn nav-link w-100 diff" id="easy">Easy</button></li>
-          <li class="nav-item p-0"><button class="btn nav-link w-100 diff" id="hard">Hard</button></li>
+    <nav class="nvBar1">
+      <ul class="nav justify-content-around w-75 mx-auto">
+        <li class="nav-item"><button class="btn nav-link w-100 h-100" id="reset">Reset</button></li>
+        <li class="nav-item"><span class="nav-link h-100" id="answer"></span></li>
+        <div class="nav" id="diffNav">
+          <li class="nav-item"><button class="btn nav-link w-100 diff" id="easy">Easy</button></li>
+          <li class="nav-item"><button class="btn nav-link w-100 diff" id="hard">Hard</button></li>
         </div>
       </ul>
     </nav>
 
     <!-- NOTE Squares -->
     <div class="container">
+      <h1 class="display-4 text-center text-light py-2" >Score: <span id="score">0</span></h1>
       <div class="square"></div>
       <div class="square"></div>
       <div class="square"></div>
