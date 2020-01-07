@@ -1,0 +1,27 @@
+html,
+body {
+    height:100%;
+    margin:0;
+    padding:0;
+}
+
+body {
+    background: linear-gradient(#00d9ff,#c9fff1);
+}
+
+#mainContentBox {
+    height:60%;
+    background-color: rgb(182, 63, 79);
+    top:8rem;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .4);
+    -moz-transition: box-shadow 1s ease-in-out;
+    -webkit-transition: box-shadow 1s ease-in-out;
+    transition: box-shadow 1s ease-in-out;
+}
+
+#mainContentBox:hover {
+    box-shadow: 0 0 3rem rgba(0, 0, 0, .45);
+}
+
