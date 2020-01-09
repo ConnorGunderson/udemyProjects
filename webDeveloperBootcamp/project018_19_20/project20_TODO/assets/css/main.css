@@ -1,3 +1,12 @@
+:root {
+    /* Teal */
+    --custom-color-01:#8deeff;
+    /* Light teal */
+    --custom-color-02:rgb(234, 251, 255);
+    /* Grey 01 */
+    --custom-color-03:#757575;
+}
+
 html,
 body {
     height:100%;
@@ -10,9 +19,10 @@ body {
 }
 
 #mainContentBox {
-    height:60%;
-    background-color: rgb(182, 63, 79);
+    position: relative;
+    width:40rem;
     top:8rem;
+    background-color: var(--custom-color-02);
     margin: 0;
     padding: 0;
     box-shadow: 0 0 1rem rgba(0, 0, 0, .4);
@@ -25,3 +35,48 @@ body {
     box-shadow: 0 0 3rem rgba(0, 0, 0, .45);
 }
 
+#addToDo {
+    position: relative;
+    transition: -moz-transform 1s ease-in;
+}
+
+#addToDo:hover {
+    -moz-transform: rotate(360deg);
+    color: var(--custom-color-01);
+}
+
+#input1 {
+    border: none;
+    padding:1rem;
+    font-size: 2rem;
+}
+
+li {
+    padding:.5rem;
+    list-style: none;
+    height:20%;
+    font-size: 2rem;
+    color: var(--custom-color-03);
+}
+
+
+
+/* Animations */
+
+
+/* In-line custom CSS */
+.bg-teal {
+    background-color: var(--custom-color-01);
+}
+
+.bg-lteal {
+    background-color: var(--custom-color-02);
+}
+
+.text-teal {
+    color: var(--custom-color-01);
+}
+
+.text-lteal {
+    color: var(--custom-color-02);
+}
