@@ -1,21 +1,34 @@
 // Give alternate CSS to odd children in the ToDO ul
-$("li:nth-child(odd)").css({"background-color": "var(--custom-color-01"});
-
-// give input a enter function which clears the text and submits the new ToDo the ul
-
-$("#inputToDo").on("keypress",function(e) {
-    if (e.which == 13) {
-        
-    }
-})
-
-$("li").click( function()
+function LiColor() { $("li:nth-child(odd)").css({"background-color": "var(--custom-color-01"}) };
+// Click the 'X' in the li to delete the list item
+function addRemoveFnc() { $("ul").on("click", "li", function()
 {
-    $(this).fadeToggle(200)
+    $(this).fadeToggle(150)
     setTimeout(() => {
         $(this).remove()
-    }, 150);
+    }, 100);
     
-})
+})};
 
-// Prototypes
+// Call init functions
+LiColor();
+addRemoveFnc();
+
+// give input a enter function which clears the text and submits the new ToDo the ul
+$("input[type='text']").on("keypress",function(e) {
+    if (e.which === 13) {
+        // Store the text from input into new variable
+        let tmpTxt = $(this).val()
+        // Append the text into a new list item then color it
+        $('ul').append("<li><span class='py-3'><i class='fa fa-trash-o'></i></span>" + tmpTxt +"</li>");
+        LiColor();
+        addRemoveFnc();
+        // Delete the text so a new todo can be added
+        $(this).val("")
+    }
+});
+
+// toggle input
+$(".fa-plus").click(function(){
+    $("#inputToDo").fadeToggle();
+})

@@ -6,7 +6,7 @@
     /* Grey 01 */
     --custom-color-03:#757575;
 }
-
+/* Globals */
 html,
 body {
     height:100%;
@@ -18,6 +18,36 @@ body {
     background: linear-gradient(#00d9ff,#c9fff1);
 }
 
+li {
+    list-style: none;
+    font-size: 2rem;
+    color: var(--custom-color-03);
+}
+
+input {
+    padding: 1rem;
+    border: none;
+    font-size: 2rem;
+}
+
+span {
+    width: 0;
+    text-align: center;
+    color: white;
+    background: #e74c3c;
+    display: inline-block;
+    margin-right: 2rem;
+    transition: width .2s ease;
+    opacity: 0;
+}
+
+
+li:hover span {
+    width: 6rem;
+    opacity: 1;
+}
+
+/* Secondaries */
 #mainContentBox {
     position: relative;
     width:40rem;
@@ -35,33 +65,16 @@ body {
     box-shadow: 0 0 3rem rgba(0, 0, 0, .45);
 }
 
-#addToDo {
+.fa-plus {
     position: relative;
-    transition: -moz-transform 1s ease-in;
+    transition: transform 1s ease-in;
 }
 
-#addToDo:hover {
-    -moz-transform: rotate(360deg);
+.fa-plus:hover {
+    transform: rotate(360deg);
     color: var(--custom-color-01);
 }
 
-#input1 {
-    border: none;
-    padding:1rem;
-    font-size: 2rem;
-}
-
-li {
-    padding:.5rem;
-    list-style: none;
-    height:20%;
-    font-size: 2rem;
-    color: var(--custom-color-03);
-}
-
-
-
-/* Animations */
 
 
 /* In-line custom CSS */
@@ -79,4 +92,8 @@ li {
 
 .text-lteal {
     color: var(--custom-color-02);
+}
+
+.text-lgrey {
+    color: var(--custom-color-03);
 }
