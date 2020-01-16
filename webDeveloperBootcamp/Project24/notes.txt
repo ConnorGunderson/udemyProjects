@@ -1,0 +1,9 @@
+NPM - Node Package manager
+Getting libaries with node requires this
+"npm install"
+
+Frameworks vs Libraries
+Frameworks call to user while libraries need to be called by the user
+
+Frameworks
+HeavyWeight vs Lightweight
