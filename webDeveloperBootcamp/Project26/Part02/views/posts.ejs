@@ -1,0 +1,17 @@
+<%- include(partials/header) %> 
+<h1>Welcome to posts.ejs </h1>
+
+<% for (let i = 0; i < posts.length; i++){ %> 
+    <li class="text-danger"> <%= posts[i].title %> - <%= posts[i].author %> </li>
+<% } %>  
+<br>
+<br>
+<% posts.forEach(function(post){ %> 
+    <li>
+        <%= post.title %> - <%= post.author %> 
+    </li>
+<% }) %> 
+
+<!-- NOTE %= vs % ; forEach vs for loop iteration over objects -->
+
+<%- include(partials/footer) %> 
