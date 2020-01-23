@@ -1,6 +1,7 @@
 const request = require("request")
 const express = require("express")
 const bodyParser = require("body-parser")
+const rp = require("request-promise")
 const app = express()
 
 app.use(express.static("public"))
@@ -8,14 +9,23 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.set("view engine", "ejs")
 
 // calling API's
-request("http://www.google.com", function(err, res, b){
-    if (!err && res.statusCode == "200"){
-        console.log("nice")
-    } else {
-        console.log("error", err)
-        
-    }
-})
+// request("http://www.google.com", function(err, res, b){
+    // if (!err && res.statusCode == "200"){
+        // console.log("nice")
+    // } else {
+        // console.log("error", err)
+        // 
+    // }
+// })
+
+rp('http://www.google.com')
+    .then((b) => {
+        let data = JSON.parse(b)
+        console.log(b);
+    })
+    .catch((err) => {
+        console.log("Error: ", err);
+    })
 
 let animals = [
     {animal: "cow", sound: "moo!"},

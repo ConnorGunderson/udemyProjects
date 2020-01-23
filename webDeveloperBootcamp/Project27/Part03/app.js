@@ -7,7 +7,9 @@ app.use(express.static('public'));
 app.set("view engine", "ejs");
 
 // doing a search route
-app.get('/', ())
+app.get('/', (req, res) => {
+    res.render('search')
+})
 
 app.get('/results', (req, res) => {
     rp('http://www.omdbapi.com/?s=iowa&apikey=thewdb')
@@ -31,4 +33,7 @@ app.get('/results', (req, res) => {
 //     }
 // });
 
-app.listen(3000, process.env.IP, () => {})
+app.listen(3000, process.env.IP, function(){
+    console.log('init');
+    
+})
