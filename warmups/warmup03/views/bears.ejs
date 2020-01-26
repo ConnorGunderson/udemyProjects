@@ -1,0 +1,18 @@
+<%- include('partials/header') %> 
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Welcome to Bears</h1>
+            <p class="lead">Home of the Finest Bears</p>
+        </div>
+        <div class="row">
+            <% bears.forEach((bear) => { %> 
+                <div class="thumbnail col-4">
+                    <p class=""> <%= bear.name %> </p>
+                    <p class="p-2"> This bear likes to eat: <%= bear.food %> </p>
+                </div>
+            <% }) %> 
+        </div>
+    </div>
+
+<%- include('partials/footer') %> 

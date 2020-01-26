@@ -1,0 +1,17 @@
+.ct1 {
+    color:#555555;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.ct1:hover {
+    color:#a8a8a8;
+}
+
+.form-text {
+    font-size: .6rem;
+    color: #a8a8a8;
+}
+
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">

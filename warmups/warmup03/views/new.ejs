@@ -1,0 +1,15 @@
+<%- include('partials/header') %> 
+
+    <div class="container">
+        <div class="row">
+            <form action="/bear" method="POST" class="form-group mx-auto d-flex flex-column mt-3">
+                <span class="form-text">required*</span>
+                <input type="text" name="name" placeholder="Enter new bear" class="form-group"required>
+                <span class="form-text">required*</span>
+                <input type="text" name="food" placeholder="Enter what they eat" class="form-group" required>
+                <button class="btn btn-block btn-info">Submit</button>
+            </form>
+        </div>
+    </div>
+
+<%- include('partials/footer') %> 

@@ -15,9 +15,10 @@
     <!-- SECTION list of movie titles -->
     <div class="text-info bg-dark container-fluid h-100 my-auto d-flex flex-column justify-content-between">
         <% parseData.Search.forEach((title) => { %> 
-            <h1 class="text-light" style="font-size:1rem"> <%= title.Title %> </h1>
+            <h1 class="text-light" style="font-size:1rem"> <%= title.Title %> - <%= title.Year %> </h1>
         <% }) %> 
     </div>
+    <a class=" btn btn-outline-success" href="/">Back to main page</a>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

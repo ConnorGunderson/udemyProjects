@@ -12,13 +12,16 @@ app.get('/', (req, res) => {
 })
 
 app.get('/results', (req, res) => {
-    rp('http://www.omdbapi.com/?s=iowa&apikey=thewdb')
+    let query = req.query.search
+    // console.log(query);
+    let url = `http://www.omdbapi.com/?s=${query}&apikey=thewdb`
+    rp(url)
         .then((b) => {
             let parseData = JSON.parse(b)
             res.render('results', {parseData: parseData});
         })
         .catch((err) => {
-            console.log('Error:', err)
+            console.log('Error:')
         })
 })
 
