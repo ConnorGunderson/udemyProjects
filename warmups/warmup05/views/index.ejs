@@ -1,0 +1,13 @@
+<%- include('partials/header') %> 
+
+    <div class="ui main container">
+        <% book.forEach((book) => { %> 
+            <h1 class="column"><%= book.title %> </h1>
+            <h2 class="ui small header"> <%= book.author %> </h2>
+            <img src="<%= book.image %> " class="ui tiny rounded image">
+            <span class="column"><%= book.description %> </span>
+            <div class="ui date"><%= book.created.toDateString() %> </div>
+            <form action="/books/<%= book._id %>?_method=DELETE" method="post" class="ui form"></form>
+        <% }) %> 
+    </div>
+<%- include('partials/footer') %> 

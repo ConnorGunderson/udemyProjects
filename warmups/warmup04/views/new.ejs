@@ -1,0 +1,17 @@
+<%- include('partials/header') %> 
+
+    <div class="container">
+        <div class="row">
+            <form action="/homes" method="POST" class="mx-auto mt-3 text-center col-4 col-md-6 col-lg-8">
+                <span class="form-text">*required</span>
+                <input class='form-group' type="text" placeholder="Enter the houses name" name='name' required>
+                <span class="form-text pl-5">*</span>
+                <input class='form-group' type="text" placeholder="Enter the houses price" name='price' required>
+                <span class="form-text pl-5">*</span>
+                <input class='form-group' type="text" placeholder="Enter the houses location" name='location' required>
+                <button class="btn btn-block btn-primary" type='submit' >submit</button>
+            </form>
+        </div>
+    </div>
+
+<%- include('partials/footer') %> 

@@ -1,0 +1,12 @@
+<%- include('partials/header') %> 
+
+    <h1>Welcome</h1>
+    <% blog.forEach((blog) => { %> 
+        <h1> <%= blog.title %> </h1>
+        <img src="<%= blog.image %>" height='200px' width="200pxx">
+        <p> <%= blog.body.substring(0, 100) %> </p>
+        <span><%= blog.created %></span>
+        <a href="/blog/<%= blog._id %> " class="ui primary button">Show More</a>
+    <% })  %> 
+
+<%- include('partials/footer') %> 

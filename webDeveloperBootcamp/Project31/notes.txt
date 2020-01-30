@@ -1,0 +1,10 @@
+CRUD - Created Read Update Destroy
+
+REST - mapping between HTTP and CRUD
+
+BLOG -
+
+Create /allblogs/new
+Read /allblogs
+Update /updateblog/:id
+Destroy /destroyblog/:id

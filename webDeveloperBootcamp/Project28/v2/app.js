@@ -58,13 +58,11 @@ app.get('/campgrounds', (req, res) => {
 });
 // CREATE Route
 app.post('/campgrounds', (req, res) => {
-    if (req.body.name != '' && req.body.image != '')
-    {
         let name = req.body.name;
         let image = req.body.image;
         let desc = req.body.description
         let newCamp = {name: name, image: image, description: desc};
-        Campground.create(newCamp), (e, newCamp) => {
+        Campground.create(newCamp), (e, ncamp) => {
             if (e)
             {
                 console.log('Error: ', e);
@@ -77,7 +75,6 @@ app.post('/campgrounds', (req, res) => {
 
         // campgrounds.push(newCamp);
         res.redirect('/campgrounds');
-    }
 })
 
 // NEW Route

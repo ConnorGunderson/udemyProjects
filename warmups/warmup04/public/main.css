@@ -1,0 +1,16 @@
+.ct1 {
+    color: #232323;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+
+.ct1:hover {
+    color: #6d6d6d;
+}
+
+.form-text {
+    font-size:.75rem;
+    text-align: left;
+    padding-left: 2rem;
+}
