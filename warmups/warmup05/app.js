@@ -75,7 +75,7 @@ app.get('/books/:id/edit', (req, res) => {
         if (e) {
             res.redirect('/books');
         } else {
-            res.render('books', {book: foundBook});
+            res.render('edit', {book: foundBook});
         }
     })
 })
@@ -92,7 +92,7 @@ app.put('/books/:id', (req, res) => {
 })
 
 // DESTROY
-app.get('/books/:id', (req, res) => {
+app.delete('/books/:id', (req, res) => {
     Book.findByIdAndRemove(req.params.id, (e) => {
         if (e) {
             res.redirect('/books/:id');

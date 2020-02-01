@@ -1,6 +1,25 @@
 <%- include('partials/header') %> 
 
-    <div class="ui orange main  container">
+    <div class="ui main container ">
+        <div class="ui huge top attached header">
+            <%= book.title %> 
+        </div>
+        <div class="ui orange inverted attached segment">
+            <div class="ui padded two column grid">
+                <img src="<%= book.image %>" alt="" class="ui medium rounded image">
+                <p class=""><%= book.description %> </p>
+            </div>
+        </div>
+        <div class="ui very padded bottom attached segment">
+            <div class="ui two column centerd middle aligned grid">
+                <div class="column center aligned">
+                    <h1 class="ui orange inverted header"><%= book.created.toDateString() %></h1>
+                </div>
+                <div class="column center aligned">
+                    <a href="/books/<%= book._id %>/edit" class="ui orange button fluid">Edit</a>
+                </div>
+            </div>
+        </div>
         
     </div>
 

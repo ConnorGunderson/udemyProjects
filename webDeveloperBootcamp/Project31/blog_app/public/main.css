@@ -9,3 +9,7 @@ i {
 a {
     display:inline;
 }
+
+.main {
+    margin-top: 7em !important;
+}

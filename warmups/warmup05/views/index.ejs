@@ -1,13 +1,66 @@
 <%- include('partials/header') %> 
 
     <div class="ui main container">
-        <% book.forEach((book) => { %> 
-            <h1 class="column"><%= book.title %> </h1>
-            <h2 class="ui small header"> <%= book.author %> </h2>
-            <img src="<%= book.image %> " class="ui tiny rounded image">
-            <span class="column"><%= book.description %> </span>
-            <div class="ui date"><%= book.created.toDateString() %> </div>
-            <form action="/books/<%= book._id %>?_method=DELETE" method="post" class="ui form"></form>
-        <% }) %> 
+        <div class="ui very padded basic segment">
+            <div class="ui orange two column center aligned grid">
+                <div class="ui vertical divider">Or</div>
+                <div class="middle aligned row">
+                    <div class="column">
+                        <div class="ui icon header">
+                            <i class="orange search icon"></i>
+                            Find <span class="ui orange small header">Book</span>
+                        </div>
+                        <div class="field">
+                            <div class="ui search">
+                                <div class="ui icon input">
+                                    <input type="text" class="prompt" placeholder="Search for a book">
+                                    <i class="orange search icon"></i>
+                                </div>
+                                <div class="results"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui column">
+                        <div class="ui icon header">
+                            <i class="orange plus icon"></i>
+                            Add A Book
+                        </div>
+                        <div class="">
+                            <a href='/books/new' class="ui orange inverted button">Add</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui raised very padded segment">
+            <div class="ui padded three stackable computer cards">
+                <% book.forEach((book) => { %>
+                    <div class="ui card">
+                        <div class="image">
+                            <img src="<%= book.image %>">
+                        </div>
+                        <div class="content">
+                            <span>Title:</span>
+                            <p class="ui huge header"><%= book.title %> </p>
+                            <hr class="ui horizontal row">
+                            <span>Created by:</span>
+                            <p class="ui huge header" id="author"> <%= book.author %> </p>
+                            <span class="ui mini header">Description:</span>
+                            <p class="column"><%= book.description %> </p>
+                        </div>
+                        <div class="ui extra content">
+                            <div class="ui middle aligned two column grid">
+                                <div class="ui centered column grid">
+                                    <span class="ui date"><%= book.created.toDateString() %> </span>
+                                </div>
+                                <div class="ui centered column grid">
+                                    <a href="/books/<%= book._id %>" class="ui orange inverted fluid button">More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %> 
+            </div>
+        </div>
     </div>
 <%- include('partials/footer') %> 
