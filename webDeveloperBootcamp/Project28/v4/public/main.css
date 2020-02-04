@@ -1,0 +1,25 @@
+.thumbnail-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.a  {
+    color:#232323 !important;
+    -moz-transition: all .5s ease-in;
+    -webkit-transition: all .5s ease-in;
+    transition: all .15s ease-in;
+}
+
+.a:hover {
+    color:#b3b3b3 !important;
+}
+
+form {
+    margin: 2rem auto;
+    width: 40%;
+}
+
+.form-text {
+    font-size: .75rem !important;
+}
+

@@ -1,0 +1,13 @@
+<%- require("../partials/header") %> 
+
+    <div class="ui container">
+        <div class="ui floated orange inverted segment">
+            <form action="/foo/<%= req.params._id %>" method="POST" class="ui form">
+                <div class="field">
+                    <input type="text" name="body[title]" placeholder="Input title">
+                </div>
+            </form>
+        </div>
+    </div>
+
+<%- require("../partials/footer") %> 
