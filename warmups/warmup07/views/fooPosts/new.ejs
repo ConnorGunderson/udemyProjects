@@ -1,0 +1,22 @@
+<%- include("../partials/header"") %> 
+
+
+    <h1 class="ui huge main divider header">Add a New Post</h1>
+    <div class="ui container">
+        <div class="ui floated orange inverted segment">
+            <form action="/foo/<%= req.params._id %>" method="POST" class="ui form">
+                <div class="field">
+                    <input type="text" name="post[title]" placeholder="Input title">
+                </div>
+                <div class="field">
+                    <input type="text" name="post[image]" placeholder="Input title">
+                </div>
+                <div class="field">
+                    <textarea name="post[body]" id="" cols="30" rows="10"></textarea>
+                </div>
+                <button class="ui primary inverted basic fluid button">Submit</button>
+            </form>
+        </div>
+    </div>
+
+<%- include("../partials/footer") %> 

@@ -5,6 +5,7 @@ const
     bodyParser =    require('body-parser'),
     mongoose =      require('mongoose'),
     Campground =    require('./models/campgrounds'),
+    Comment =       require("./models/comments"),
     seedDB =        require('./seeds')       
 
 seedDB();
@@ -80,12 +81,28 @@ app.get('/campgrounds/:id', (req, res) => {
 // New Comment
 app.get("/campgrounds/:id/comments/new", (req, res) => {
     try {
-        Campground.findById(req.params.id, (e, campground) => {
+        Campground.findById(req.params.id, (n, campground) => {
             res.render("comments/new", {campground: campground})
         })
     } catch(e) {
         console.log('error ', e);
     }
+})
+
+// Comment POST
+app.post("/campgrounds/:id/comments", (req, res) => {
+    Campground.findById(req.params.id, (n, campground) => {
+        try {
+            Comment.create(req.body.comment, (n, comment) => {
+                campground.comments.push(comment)
+                campground.save()
+                res.redirect("/campgrounds/" + req.params.id);
+            });
+        } catch (e) {
+            console.log('error ', e);
+            res.redirect('/campgrounds/' + req.params.id);
+        }
+    })
 })
 
 app.listen(3000, process.env.IP, () => {})

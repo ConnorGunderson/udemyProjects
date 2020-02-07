@@ -1,0 +1,21 @@
+<%- include("../partials/header") %> 
+
+    <div class="ui main container">
+        <div class="ui items">
+            <% posts.forEach((post) => { %> 
+                <div class="item">
+                    <div class="image">
+                        <img src="<%= post.image %> " alt="">
+                    </div>
+                    <div class="content">
+                        <a class="ui orange huge divider header"><%= post.title %> </a>    
+                    </div>
+                    <div class="description">
+                        <p class=""></p>
+                    </div>
+                </div>
+                <% }) %> 
+        </div>  
+    </div>
+
+<%- include("../partials/footer") %> 

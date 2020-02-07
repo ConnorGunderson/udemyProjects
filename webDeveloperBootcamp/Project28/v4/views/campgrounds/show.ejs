@@ -1,11 +1,24 @@
 <%- include('../partials/header') %> 
-    <h1 class="display-2">
-        <%= campground.name %> 
-    </h1>
-    <img src="<%= campground.image %>" alt="">
-    <p> <%= campground.description %> </p>
-    <% campground.comments.forEach((comment) => { %> 
-        <p class=""><%= comment.content %> </p>
-    <% }) %>
-    <a href="/campgrounds/<%= campground._id %>/comments/new" class="btn btn-primary">Create new comment</a>
+
+
+    <div class="container-fluid p-5 h-50 mt-5">
+        <div class="column row-md h-100">
+            <div class="col-md-12 mx-auto justify-content-around row">
+                <div class="col-md-6 mb-5 mb-md-0 overlow-hidden text-center">
+                    <h1 class="display-4">
+                        <%= campground.name %> 
+                    </h1>
+                    <img src="<%= campground.image %>" alt="" class="image-fluid p-1" height="100%" width="100%">
+                </div>
+                <div class="col-md-6 mt-5 pt-5 pl-4 d-flex justify-content-between">
+                    <h3 class="lead">Comments:</h3>
+                    <p> <%= campground.description %> </p>
+                    <% campground.comments.forEach((comment) => { %> 
+                        <p class="text-dark"><%= comment.content %> </p>
+                    <% }) %>
+                    <a href="/campgrounds/<%= campground._id %>/comments/new" class="btn btn-primary align-self-end">Create new comment</a>
+                </div>
+            </div>
+        </div>
+    </div>
 <%- include('../partials/footer') %> 

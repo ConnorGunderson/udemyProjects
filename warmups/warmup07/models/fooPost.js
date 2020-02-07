@@ -6,10 +6,12 @@ let fooPostSchema = new mongoose.Schema(
         image: String,
         content: String,
         created: {type: Date, default: Date.now},
-        comments: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Comment"
-        }
+        comments: [
+            {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: "Comment"
+            }
+        ]            
     }
 )
 

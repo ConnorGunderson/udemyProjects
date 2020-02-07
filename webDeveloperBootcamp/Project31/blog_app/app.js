@@ -108,7 +108,7 @@ app.put('/blog/:id', (req, res)=> {
         {
             res.redirect('/blog/' + req.params.id)
         }
-    } )
+    } 
 })
 
 // DELETE ROUTE
